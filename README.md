@@ -1,4 +1,4 @@
-# 🧬 Clash-Free Timetable Scheduling using Genetic Algorithms
+# 🧬 Clash-Free Timetable Scheduling using Genetic Algorithms (Version 1.0)
 
 This project demonstrates the use of a **Genetic Algorithm (GA)** to generate **two clash-free timetables** over **3 days**, with **3 periods each day**, and **3 teachers**. The aim is to optimize schedules while avoiding conflicts, ensuring that no teacher is double-booked at the same time in either timetable.
 
@@ -42,13 +42,16 @@ A **"collision"** occurs if a teacher is assigned to both timetables at the **sa
 ### 🔁 Genetic Operators
 
 - **Selection**  
-  ✔️ Random selection only (❌ No tournament, rank-based, or roulette wheel selection)
+  ✔️ Uses **random selection only**  
+  ❌ No tournament, rank-based, or roulette wheel selection
 
 - **Crossover**  
-  ✔️ Randomly generates binary children (teacher schedules) with **exact total teaching hours**
+  ✔️ Randomly generates valid children bit strings  
+  ✔️ Ensures exact teaching hours per teacher
 
 - **Mutation**  
-  ✔️ Randomly generates valid bit strings while preserving **hour constraints**
+  ✔️ Randomly mutates valid strings  
+  ✔️ Maintains the 3-period rule
 
 ---
 
@@ -70,6 +73,40 @@ Two optimized, clash-free schedules are generated and visualized as **binary hea
 - **Y-axis** → Teachers  
 - **Black** = Assigned class
 - **White** = Free period
+
+Sample Output:
+*(Add your heatmap image or screenshot here)*
+
+---
+## ▶️ How to Run
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/your-username/genetic-timetable-v1.git
+   cd genetic-timetable-v1
+   ```
+   
+2. Install dependencies:
+   
+   ```bash
+   pip install numpy pandas matplotlib
+   ```
+   
+4. Run the script:
+   ```bash
+   python time_table.py
+   ```
+   
+---
+
+## 🚫 Limitations
+
+- Fixed to 3 teachers, 3 days, and 3 periods per day.
+- Teaching hours are hard-coded to 3 per teacher.
+- Only supports generation of 2 timetables at a time.
+- Uses purely random selection, mutation, and crossover methods.
+- Not suitable for large or real-time scheduling needs.
 
 ---
 
