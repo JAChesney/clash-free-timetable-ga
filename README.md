@@ -94,5 +94,3 @@ Two optimized, clash-free schedules are generated and visualized as **binary hea
 
 - *A Review of Optimization Algorithms for University Timetable Scheduling* – Umm Al Qura University  
 - *Learning Genetic Algorithms with Python* by Ivan Gridin
-
----
