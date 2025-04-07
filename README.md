@@ -83,8 +83,7 @@ Sample Output:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/genetic-timetable-v1.git
-   cd genetic-timetable-v1
+   gh repo clone JAChesney/clash-free-timetable-ga.git
    ```
    
 2. Install dependencies:
