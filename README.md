@@ -49,5 +49,4 @@ timtable/ ├── main.py # Entry point and execution logic ├── timetabl
    ```bash
    git clone https://github.com/yourusername/genetic-timetable.git
    cd genetic-timetable
-
-python main.py
+   python main.py
