@@ -76,7 +76,7 @@ Two optimized, clash-free schedules are generated and visualized as **binary hea
 
 Sample Output:
 
-![image](https://github.com/user-attachments/assets/f428c2a8-a7af-493a-aff4-9f2fe26b17ba)
+![image](https://github.com/user-attachments/assets/32b7b437-1980-45fb-ad49-2c32a7456122)
 
 ---
 ## ▶️ How to Run
