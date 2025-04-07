@@ -75,10 +75,10 @@ Two optimized, clash-free schedules are generated and visualized as **binary hea
 
 ### 💻 Tech Stack
 
-- Python 🐍  
-- NumPy  
-- Pandas  
-- Matplotlib
+- ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
+- ![NumPy](https://img.shields.io/badge/-NumPy-013243?style=flat&logo=numpy&logoColor=white)
+- ![Pandas](https://img.shields.io/badge/-Pandas-150458?style=flat&logo=pandas&logoColor=white)
+- ![Matplotlib](https://img.shields.io/badge/-Matplotlib-ffffff?style=flat&logo=matplotlib&logoColor=black)
 
 ---
 
