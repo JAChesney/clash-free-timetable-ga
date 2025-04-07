@@ -68,8 +68,8 @@ Two optimized, clash-free schedules are generated and visualized as **binary hea
 
 - **X-axis** → Days × Periods  
 - **Y-axis** → Teachers  
-- **Black** = Free period  
-- **White** = Assigned class
+- **Black** = Assigned class
+- **White** = Free period
 
 ---
 
@@ -79,14 +79,6 @@ Two optimized, clash-free schedules are generated and visualized as **binary hea
 - NumPy  
 - Pandas  
 - Matplotlib
-
----
-
-### 🙏 Acknowledgements
-
-- Praveen Kumar  
-- Jayati Kaushik  
-- Class of BDA 2022–2024
 
 ---
 
