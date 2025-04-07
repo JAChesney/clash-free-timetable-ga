@@ -34,57 +34,65 @@ Generate **two valid class schedules** such that:
 ```python
 Fitness = 1 / (1 + Collision Count)
 ```
-A "collision" occurs if a teacher is assigned to both timetables at the same slot.
 
-🔁 Genetic Operators
-Selection
-✔️ Random selection only (no tournament, rank-based, or roulette wheel selection).
+A **"collision"** occurs if a teacher is assigned to both timetables at the **same time slot**.
 
-Crossover
-✔️ Randomly generates binary children (teacher schedules) with exact total teaching hours.
+---
 
-Mutation
-✔️ Randomly generates valid bit strings ensuring hour constraints are met.
+### 🔁 Genetic Operators
 
-🔄 Evolution Process
-Starts with an initial population from .csv files (see1.csv, see2.csv).
+- **Selection**  
+  ✔️ Random selection only (❌ No tournament, rank-based, or roulette wheel selection)
 
-Repeats selection, crossover, and mutation until:
+- **Crossover**  
+  ✔️ Randomly generates binary children (teacher schedules) with **exact total teaching hours**
 
-Both schedules are valid
+- **Mutation**  
+  ✔️ Randomly generates valid bit strings while preserving **hour constraints**
 
-No overlapping teacher assignments
+---
 
-Fitness score reaches 1.0
+### 🔄 Evolution Process
 
-📊 Output
-Two visual class schedules are shown with binary heatmaps:
+- Starts with an initial population from CSV files: `see1.csv`, `see2.csv`  
+- Repeats genetic operations until:
+  - ✅ Both schedules are valid  
+  - ✅ No overlapping teacher assignments  
+  - ✅ Fitness score reaches `1.0`
 
-X-axis: Days and Periods
+---
 
-Y-axis: Teachers
+### 📊 Output
 
-Black = Free, White = Assigned
+Two optimized, clash-free schedules are generated and visualized as **binary heatmaps**:
 
-💻 Tech Stack
-Python 🐍
+- **X-axis** → Days × Periods  
+- **Y-axis** → Teachers  
+- **Black** = Free period  
+- **White** = Assigned class
 
-NumPy
+---
 
-Pandas
+### 💻 Tech Stack
 
-Matplotlib
+- Python 🐍  
+- NumPy  
+- Pandas  
+- Matplotlib
 
-🙏 Acknowledgements
-Praveen Kumar
+---
 
-Jayati Kaushik
+### 🙏 Acknowledgements
 
-Class of BDA 2022–2024
+- Praveen Kumar  
+- Jayati Kaushik  
+- Class of BDA 2022–2024
 
-📚 References
-A Review of Optimization Algorithms for University Timetable Scheduling – Umm Al Qura University
+---
 
-Learning Genetic Algorithms with Python by Ivan Gridin
+### 📚 References
+
+- *A Review of Optimization Algorithms for University Timetable Scheduling* – Umm Al Qura University  
+- *Learning Genetic Algorithms with Python* by Ivan Gridin
 
 ---
