@@ -75,7 +75,8 @@ Two optimized, clash-free schedules are generated and visualized as **binary hea
 - **White** = Free period
 
 Sample Output:
-*(Add your heatmap image or screenshot here)*
+
+![image](https://github.com/user-attachments/assets/f428c2a8-a7af-493a-aff4-9f2fe26b17ba)
 
 ---
 ## ▶️ How to Run
