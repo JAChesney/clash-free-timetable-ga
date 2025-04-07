@@ -2,51 +2,89 @@
 
 This project demonstrates the use of a **Genetic Algorithm (GA)** to generate **two clash-free timetables** over **3 days**, with **3 periods each day**, and **3 teachers**. The aim is to optimize schedules while avoiding conflicts, ensuring that no teacher is double-booked at the same time in either timetable.
 
-## 📌 Features
+## 📚 Scenario
 
-- Generates **two independent timetables**.
-- Applies **Genetic Algorithm** principles: selection, crossover, and mutation.
-- Ensures **no teacher clash** within and between timetables.
-- Encodes timetable entries as **bit strings**.
-- Evaluates fitness based on **clash count** and **validity**.
-- Supports **expansion** for more teachers, periods, and days.
+- 3 Teachers  
+- 3 Days  
+- 3 Periods per Day  
+- Each teacher teaches for exactly 3 hours (1 period per day)  
 
-## 📘 Problem Definition
+---
 
-- **Days**: 3 (e.g., Monday, Tuesday, Wednesday)
-- **Periods per day**: 3 (i.e., total of 9 slots per timetable)
-- **Teachers**: 3 (T1, T2, T3)
-- **Objective**: Generate 2 schedules such that:
-  - No teacher appears in more than one class per period.
-  - Both schedules are **completely independent** (no teacher overlap at the same time).
+## 🧠 Problem Statement
 
-## 🛠️ How It Works
+Generate **two valid class schedules** such that:
 
-1. **Encoding**: Each timetable is encoded into a bit string, representing teacher assignments for each period.
-2. **Population Initialization**: A number of candidate solutions (chromosomes) are randomly generated.
-3. **Fitness Evaluation**: Clash-free schedules are scored higher.
-4. **Selection**: Best individuals are selected based on fitness.
-5. **Crossover**: Parts of two parents are combined to form new offspring.
-6. **Mutation**: Some bits are randomly flipped to maintain diversity.
-7. **Replacement**: The new generation replaces the old, and the process repeats until convergence or the max generation is reached.
+- Teachers are not assigned to two periods at the same time (no collision).  
+- Both schedules are independent (no shared teacher slots).  
+- Total teaching time per teacher is exactly 3 hours.  
+- Final fitness score = **1.0** (indicates no clash).  
 
-## 🧪 Example Output
+---
 
-Schedule 1: Day 1: T1 | T2 | T3 Day 2: T2 | T1 | T3 Day 3: T3 | T1 | T2
-Schedule 2: Day 1: T2 | T3 | T1 Day 2: T1 | T3 | T2 Day 3: T3 | T2 | T1
+## ⚙️ How the Genetic Algorithm Works
 
-✅ Both schedules are clash-free  
-❌ No overlapping teacher in the same period across both timetables
+### 📌 Chromosome Representation
 
-## 📂 Project Structure
+- Each schedule is a binary matrix (teacher × slots).  
+- A `1` at position *(i, j)* means Teacher `i` teaches in slot `j`.  
 
-timtable/ ├── main.py # Entry point and execution logic ├── timetable.py # Timetable representation and fitness evaluation ├── ga.py # Genetic algorithm logic ├── utils.py # Helper functions └── README.md # Project documentation
+### 🔍 Fitness Function
 
+```python
+Fitness = 1 / (1 + Collision Count)
+```
+A "collision" occurs if a teacher is assigned to both timetables at the same slot.
 
-## 🚀 Getting Started
+🔁 Genetic Operators
+Selection
+✔️ Random selection only (no tournament, rank-based, or roulette wheel selection).
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourusername/genetic-timetable.git
-   cd genetic-timetable
-   python main.py
+Crossover
+✔️ Randomly generates binary children (teacher schedules) with exact total teaching hours.
+
+Mutation
+✔️ Randomly generates valid bit strings ensuring hour constraints are met.
+
+🔄 Evolution Process
+Starts with an initial population from .csv files (see1.csv, see2.csv).
+
+Repeats selection, crossover, and mutation until:
+
+Both schedules are valid
+
+No overlapping teacher assignments
+
+Fitness score reaches 1.0
+
+📊 Output
+Two visual class schedules are shown with binary heatmaps:
+
+X-axis: Days and Periods
+
+Y-axis: Teachers
+
+Black = Free, White = Assigned
+
+💻 Tech Stack
+Python 🐍
+
+NumPy
+
+Pandas
+
+Matplotlib
+
+🙏 Acknowledgements
+Praveen Kumar
+
+Jayati Kaushik
+
+Class of BDA 2022–2024
+
+📚 References
+A Review of Optimization Algorithms for University Timetable Scheduling – Umm Al Qura University
+
+Learning Genetic Algorithms with Python by Ivan Gridin
+
+---
