@@ -83,7 +83,7 @@ Sample Output:
 1. Clone this repository:
 
    ```bash
-   gh repo clone JAChesney/clash-free-timetable-ga.git
+   git clone https://github.com/JAChesney/clash-free-timetable-ga-v1.git
    ```
    
 2. Install dependencies:
