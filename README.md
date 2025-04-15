@@ -55,6 +55,28 @@ A **"collision"** occurs if a teacher is assigned to both timetables at the **sa
 
 ---
 
+### 📊 Where Genetic Algorithms Fit in Analytics
+
+This project leverages **Genetic Algorithms (GAs)**, which are a part of **Prescriptive Analytics** in the data analytics hierarchy.
+
+#### 🔍 Analytics Categories
+
+1. **Descriptive Analytics** – What happened?  
+2. **Diagnostic Analytics** – Why did it happen?  
+3. **Predictive Analytics** – What is likely to happen?  
+4. **Prescriptive Analytics** – What should we do?
+
+> Genetic Algorithms are categorized under **Prescriptive Analytics** because they are used to find the **best possible action or solution** for a given problem.
+
+In this project, the GA is used to **prescribe optimal, clash-free class schedules** by:
+- Exploring all valid combinations of teacher assignments  
+- Evolving the population toward conflict-free solutions  
+- Using fitness-based feedback to guide decision-making  
+
+This makes GAs a powerful optimization tool in educational planning and scheduling scenarios.
+
+---
+
 ### 🔄 Evolution Process
 
 - Starts with an initial population from CSV files: `see1.csv`, `see2.csv`  
