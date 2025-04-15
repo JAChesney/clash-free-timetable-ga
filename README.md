@@ -55,7 +55,7 @@ A **"collision"** occurs if a teacher is assigned to both timetables at the **sa
 
 ---
 
-### 📊 Where Genetic Algorithms Fit in Analytics
+### 🧭 Where Genetic Algorithms Fit in Analytics?
 
 This project leverages **Genetic Algorithms (GAs)**, which are a part of **Prescriptive Analytics** in the data analytics hierarchy.
 
